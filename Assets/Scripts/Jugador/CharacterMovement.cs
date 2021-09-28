@@ -24,7 +24,7 @@ public class CharacterMovement : MonoBehaviour
         if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-        Animator.SetBool("Running", Horizontal != 0.0f);
+        Animator.SetBool("Running", true);
 
         // Detectar Suelo
         // Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
