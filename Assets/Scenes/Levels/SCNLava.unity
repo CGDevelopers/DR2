@@ -2603,7 +2603,6 @@ GameObject:
   m_Component:
   - component: {fileID: 951348175}
   - component: {fileID: 951348174}
-  - component: {fileID: 951348176}
   m_Layer: 0
   m_Name: Mesa de trabajo 1
   m_TagString: Untagged
@@ -2676,25 +2675,6 @@ Transform:
   m_Father: {fileID: 1829187935}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &951348176
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 951348173}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70babd850e45ed84db86a3e2134a2538, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &980152526
 GameObject:
   m_ObjectHideFlags: 0
@@ -4722,7 +4702,7 @@ GameObject:
   - component: {fileID: 1711630891}
   - component: {fileID: 1711630890}
   m_Layer: 5
-  m_Name: Vlad
+  m_Name: Cajin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4738,7 +4718,7 @@ Animator:
   m_GameObject: {fileID: 1711630889}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b9e68e3510d270d43a4e7023b6ee96da, type: 2}
+  m_Controller: {fileID: 9100000, guid: ae9cf542cb9605841a38e5017e6d390d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4857,7 +4837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711630889}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -58.56, y: -2.63, z: 0}
+  m_LocalPosition: {x: -53.73, y: 6, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

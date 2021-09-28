@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
     public float JumpForce;
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
+    private SpriteRenderer mySpriteRenderer;
     private float Horizontal;
     private bool Grounded;
     
@@ -14,6 +15,7 @@ public class CharacterMovement : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
      void Update()
@@ -21,10 +23,23 @@ public class CharacterMovement : MonoBehaviour
         // Movimiento
         Horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Horizontal < 0.0f) transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            if(mySpriteRenderer != null)
+            {
+                 // Girar el sprite
+                 mySpriteRenderer.flipX = true;
+            }
 
-        Animator.SetBool("Running", true);
+
+        }
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+                // Girar el sprite
+                mySpriteRenderer.flipX = false;
+        }
+
+        Animator.SetBool("Running", Horizontal != 0.0f);
 
         // Detectar Suelo
         // Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
@@ -35,7 +50,7 @@ public class CharacterMovement : MonoBehaviour
         else Grounded = false;
 
         // Salto
-        if (Input.GetKeyDown(KeyCode.W) && Grounded)
+        if (Input.GetKeyDown(KeyCode.W))
         {
             Jump();
         }
