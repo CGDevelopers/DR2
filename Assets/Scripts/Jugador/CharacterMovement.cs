@@ -18,12 +18,21 @@ public class CharacterMovement : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void OnCollisionEnter2D(Collision2D col){
+
+        Grounded = true;
+    }
+
+    private void OnCollisionExit2D(Collision2D col){
+        Grounded = false;
+    }
+
      void Update()
     {
         // Movimiento
         Horizontal = Input.GetAxisRaw("Horizontal");
 
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.A) | Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if(mySpriteRenderer != null)
             {
@@ -33,7 +42,7 @@ public class CharacterMovement : MonoBehaviour
 
 
         }
-        if(Input.GetKeyDown(KeyCode.D))
+        if(Input.GetKeyDown(KeyCode.D) | Input.GetKeyDown(KeyCode.RightArrow))
         {
                 // Girar el sprite
                 mySpriteRenderer.flipX = false;
@@ -41,21 +50,16 @@ public class CharacterMovement : MonoBehaviour
 
         Animator.SetBool("Running", Horizontal != 0.0f);
 
-        // Detectar Suelo
-        // Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
-        if (Physics2D.Raycast(transform.position, Vector3.down, 0.1f))
-        {
-            Grounded = true;
-        }
-        else Grounded = false;
-
         // Salto
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) | Input.GetKeyDown(KeyCode.UpArrow) && Grounded == true)
         {
+            if(Grounded == true){
             Jump();
+            }
         }
 
     }
+
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
