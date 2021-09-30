@@ -4867,7 +4867,7 @@ GameObject:
   - component: {fileID: 1711630890}
   m_Layer: 5
   m_Name: Cajin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5563,7 +5563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3758f1c8b0b13f49a23557626857d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Muerte: 0
+  NameScene: 
 --- !u!1001 &1937043894
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    public string NameScene;
 
-    public bool Muerte = false;
+    private void OnCollisionEnter2D (Collision2D col)
+    {
 
-    private void tocastelava (Collision2D col)
-    {
-Muerte = true;
-    }
-    public void Perdiste ()
-    {
-        if(Muerte == true){
-        SceneManager.LoadScene(1);}
+        if(col.gameObject.tag == "Player")
+        {
+            NameScene = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(NameScene);
+        }
+
     }
 
 }
