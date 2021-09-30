@@ -10,12 +10,12 @@ public class FinDeLaBeta : MonoBehaviour
         SceneManager.LoadScene("SCNMenuV2");
     }
 
-    public void PlayGame ()
+    public void RePlayGame ()
     {
         SceneManager.LoadScene("Carga1");
     }
 
-    public void QuitGame ()
+    public void ReQuitGame ()
     {
         Debug.Log("Quit!");
         Application.Quit();

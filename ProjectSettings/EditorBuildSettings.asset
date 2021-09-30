@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/SCNLava.unity
     guid: f33ced2ce6b155e47b91cc061107e59e
+  - enabled: 1
+    path: Assets/Scenes/FinDeLaBeta.unity
+    guid: 8bdc096d7441f3f459149327be48b16e
+  - enabled: 1
+    path: Assets/Scenes/Carga1.unity
+    guid: afdc103c459fae44891fb4a34baca500
   m_configObjects: {}
