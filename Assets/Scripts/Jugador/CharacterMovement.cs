@@ -4,6 +4,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public float Speed;
+    public float SpeedJump;
     public float JumpForce;
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
@@ -16,6 +17,7 @@ public class CharacterMovement : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        SpeedJump = 1.3333334f;
     }
 
     private void OnCollisionEnter2D(Collision2D col){
@@ -63,6 +65,11 @@ public class CharacterMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
+
+        if (Grounded == false)
+        {
+            Rigidbody2D.velocity = new Vector3(Horizontal * Speed / SpeedJump, Rigidbody2D.velocity.y);
+        }
     }
 
     private void Jump()

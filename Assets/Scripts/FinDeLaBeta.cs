@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FinDeLaBeta : MonoBehaviour
 {
-    public void backmenu ()
+    public void Backmenu ()
     {
         SceneManager.LoadScene("SCNMenuV2");
     }
