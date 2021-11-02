@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aa130faaea86b3b4dbbf7cdc8412a025
+guid: 45d602068da3c01418630208a7b05ea6
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: 1781247204242201424
     second: Assets cajin corriendo_5
+  - first:
+      213: -7193407884977760101
+    second: Assets cajin corriendo_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,9 +140,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 375
-        width: 876
-        height: 1635
+        y: 7
+        width: 146
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,10 +160,10 @@ TextureImporter:
       name: Assets cajin corriendo_1
       rect:
         serializedVersion: 2
-        x: 1324
-        y: 446
-        width: 1041
-        height: 1521
+        x: 204
+        y: 7
+        width: 172
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +181,10 @@ TextureImporter:
       name: Assets cajin corriendo_2
       rect:
         serializedVersion: 2
-        x: 2738
-        y: 439
-        width: 1087
-        height: 1761
+        x: 454
+        y: 7
+        width: 145
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,10 +202,10 @@ TextureImporter:
       name: Assets cajin corriendo_3
       rect:
         serializedVersion: 2
-        x: 3587
-        y: 0
-        width: 945
-        height: 1562
+        x: 696
+        y: 3
+        width: 126
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +223,10 @@ TextureImporter:
       name: Assets cajin corriendo_4
       rect:
         serializedVersion: 2
-        x: 5022
-        y: 634
-        width: 1049
-        height: 1566
+        x: 883
+        y: 2
+        width: 168
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +244,10 @@ TextureImporter:
       name: Assets cajin corriendo_5
       rect:
         serializedVersion: 2
-        x: 6568
-        y: 482
-        width: 709
-        height: 1713
+        x: 1128
+        y: 1
+        width: 120
+        height: 253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,6 +257,27 @@ TextureImporter:
       bones: []
       spriteID: 05b930215e248b810800000000000000
       internalID: 1781247204242201424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets cajin corriendo_6
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 0
+        width: 96
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98186314a1eb2c90800000000000000
+      internalID: -7193407884977760101
       vertices: []
       indices: 
       edges: []

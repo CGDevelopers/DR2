@@ -1,8 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
+    public static int vida;
+
+    //Variables de movimiento 
     public float Speed;
     public float SpeedJump;
     public float JumpForce;
@@ -11,21 +15,33 @@ public class CharacterMovement : MonoBehaviour
     private SpriteRenderer mySpriteRenderer;
     private float Horizontal;
     private bool Grounded;
-    
-     void Start()
+
+    void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         SpeedJump = 1.3333334f;
+        vida = PlayerPrefs.GetInt("Dificultad");
     }
 
-    private void OnCollisionEnter2D(Collision2D col){
-
+    private void OnCollisionEnter2D(Collision2D col)
+    {
         Grounded = true;
+
+        if (col.gameObject.tag == "Respawn")
+        {
+            
+        }    
+        if (col.gameObject.tag == "DeathZone")
+        {
+            vida = vida - 1;
+            
+        }
     }
 
-    private void OnCollisionExit2D(Collision2D col){
+    private void OnCollisionExit2D(Collision2D col)
+    {
         Grounded = false;
     }
 
@@ -44,6 +60,7 @@ public class CharacterMovement : MonoBehaviour
 
 
         }
+        
         if(Input.GetKeyDown(KeyCode.D) | Input.GetKeyDown(KeyCode.RightArrow))
         {
                 // Girar el sprite
@@ -55,9 +72,16 @@ public class CharacterMovement : MonoBehaviour
         // Salto
         if (Input.GetKeyDown(KeyCode.W) | Input.GetKeyDown(KeyCode.UpArrow) && Grounded == true)
         {
-            if(Grounded == true){
+            if(Grounded == true)
+            {
             Jump();
             }
+        }
+
+        //Comprobar la cantidad de vidas
+        if(vida == 0)
+        {
+            SceneManager.LoadScene("GameOver");
         }
 
     }
