@@ -7,8 +7,7 @@ public class Bala : MonoBehaviour
     private Rigidbody2D R2D;
     public float Force;
     public float TiempoTotal;
-    public float s;
-
+    
     void Start()
     {
         R2D = GetComponent<Rigidbody2D>();

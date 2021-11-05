@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    public GameObject Vlad;
+    public GameObject Player;
+
+    void Start()
+    {
+    }
 
     void Update()
     {
-        if (Vlad != null)
+        Player = GameObject.FindGameObjectWithTag("Player");
+        if (Player != null)
         {
             Vector3 position = transform.position;
-            position.x = Vlad.transform.position.x;
+            position.x = Player.transform.position.x;
             transform.position = position;
         }
     }

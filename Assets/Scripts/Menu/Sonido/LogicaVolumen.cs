@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LogicaSonido : MonoBehaviour
+public class LogicaVolumen : MonoBehaviour
 {
     public Slider slider;
     public float SliderValue;
@@ -12,10 +12,6 @@ public class LogicaSonido : MonoBehaviour
     {
         slider.value = PlayerPrefs.GetFloat("volumenAudio", 0.5f);
         AudioListener.volume = slider.value;
-        
-
-
-
     }
 
     public void ChangeSlider(float valor)

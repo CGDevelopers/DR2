@@ -8,6 +8,8 @@ public class Video : MonoBehaviour
 
     public Dropdown resolutionDropdown;
 
+    public static bool Ing;
+
     Resolution[] resolutions;
     
 
@@ -36,8 +38,24 @@ public class Video : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
     }
 
-    public void SetFullscreen (bool isFullscreen)
+    public void SetFullscreen()
     {
-        Screen.fullScreen = isFullscreen;
+        if(Screen.fullScreen == false){
+            Screen.fullScreen = true;
+        }
+
+        if(Screen.fullScreen == true){
+            Screen.fullScreen = false;
+        }        
+    }
+
+    public void Ingles()
+    {
+        Ing = true;
+    }
+
+    public void NoIngles()
+    {
+        Ing = false;       
     }
 }

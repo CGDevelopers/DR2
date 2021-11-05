@@ -7,6 +7,7 @@ public class Character: MonoBehaviour
     private static Character instance;
     public static int vida;
     private Controlador gm;
+    public float Tiempo = 0.5f;
 
     //Variables de movimiento 
     public float Speed;
@@ -15,6 +16,7 @@ public class Character: MonoBehaviour
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
     private SpriteRenderer mySpriteRenderer;
+    private AudioSource Run;
     private float Horizontal;
     private bool Grounded;
 
@@ -54,34 +56,49 @@ public class Character: MonoBehaviour
 
      void Update()
     {
+
+        if(Grounded == false)
+        {
+            Animator.SetBool("G", false);
+        }
+
+        if(Grounded == true)
+        {
+            Animator.SetBool("G", true);
+        }
+        
         // Movimiento
         Horizontal = Input.GetAxisRaw("Horizontal");
 
         if(Input.GetKeyDown(KeyCode.A) | Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if(mySpriteRenderer != null)
-            {
-                 // Girar el sprite
-                 mySpriteRenderer.flipX = true;
-            }
-
+            // Girar el sprite
+            this.mySpriteRenderer.flipX = true;
+            Run.Play();
 
         }
         
         if(Input.GetKeyDown(KeyCode.D) | Input.GetKeyDown(KeyCode.RightArrow))
         {
-                // Girar el sprite
-                mySpriteRenderer.flipX = false;
+            // Girar el sprite
+            this.mySpriteRenderer.flipX = false;
+            Run.Play();
         }
 
         Animator.SetBool("Running", Horizontal != 0.0f);
 
         // Salto
-        if (Input.GetKeyDown(KeyCode.W) | Input.GetKeyDown(KeyCode.UpArrow) && Grounded == true)
+        Tiempo -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.W) | Input.GetKeyDown(KeyCode.UpArrow))
         {
             if(Grounded == true)
             {
+            if(Tiempo < 0)
+            {
+            Tiempo = 0.5f;
             Jump();
+            }
             }
         }
 

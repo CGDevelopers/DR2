@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Menues/SCNMenuV2.unity
     guid: c2b0cdcfb77bd554e9847a79aedc61f3
   - enabled: 1
+    path: Assets/Scenes/Menues/SCNMenuV2 1.unity
+    guid: 50d0c998b860a2044bae9c7276e9c1a8
+  - enabled: 1
+    path: Assets/Scenes/Levels/Extras/Cinematicas.unity
+    guid: 2b7b77802ba3c5b48950dd2c962c6687
+  - enabled: 1
+    path: "Assets/Scenes/Levels/Extras/Cinematica Ingl\xE9s.unity"
+    guid: 9c306e8171783d345b6535b7e1a08699
+  - enabled: 1
     path: Assets/Scenes/Pantallas de Carga/Carga1.unity
     guid: afdc103c459fae44891fb4a34baca500
+  - enabled: 1
+    path: Assets/Scenes/Pantallas de Carga/Carga1In.unity
+    guid: d41ba9bde03bd864892a7c0414372223
   - enabled: 1
     path: Assets/Scenes/Levels/SCNLava.unity
     guid: f33ced2ce6b155e47b91cc061107e59e
@@ -18,9 +30,33 @@ EditorBuildSettings:
     path: Assets/Scenes/Pantallas de Carga/Carga2.unity
     guid: 8691f9d4e599fb04eba4c700728a672f
   - enabled: 1
+    path: Assets/Scenes/Pantallas de Carga/Carga2In.unity
+    guid: ba2165cd4ccf27e4a884a5e26a72d9cf
+  - enabled: 1
     path: Assets/Scenes/Levels/SCNJungla.unity
     guid: 9c23493f32a8b3f48a5742350164ca4a
   - enabled: 1
+    path: Assets/Scenes/Pantallas de Carga/Carga3.unity
+    guid: ee14a621ef8b8504c925608848817275
+  - enabled: 1
+    path: Assets/Scenes/Pantallas de Carga/Carga3In.unity
+    guid: d640bb7f5492c944d81e74fc1b4ebb2e
+  - enabled: 1
+    path: Assets/Scenes/Levels/SCNDesierto.unity
+    guid: 7436070d3be02b44b97bbfb767528ffd
+  - enabled: 1
+    path: Assets/Scenes/Pantallas de Carga/Carga4.unity
+    guid: 0a9ca7dc6651ccc43b2caf6f7fa389a1
+  - enabled: 1
+    path: Assets/Scenes/Pantallas de Carga/Carga4In.unity
+    guid: fc70ac47240eb044caf86823121f6b0f
+  - enabled: 1
+    path: Assets/Scenes/Levels/SCNlab.unity
+    guid: 3907da275b1fe75498572f572a5b7a00
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 8bdc096d7441f3f459149327be48b16e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Extras/Creditos.unity
+    guid: 501d1ec7baa29794fb3dcf497f844d59
   m_configObjects: {}

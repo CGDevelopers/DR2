@@ -5,15 +5,67 @@ using UnityEngine.SceneManagement;
 
 public class SelectorNiveles : MonoBehaviour
 {
-    public void SeleccionarLava (){
-        SceneManager.LoadScene("Carga1");
+    public void SeleccionarLava ()
+    {
 
-        PlayerPrefs.SetInt("TemporizadorNivel", PlayerPrefs.GetInt("Dificultad")*60);
+        PlayerPrefs.SetInt("TemporizadorNivel", PlayerPrefs.GetInt("Dificultad")*90);
+
+        if(Video.Ing == false)
+        {
+            SceneManager.LoadScene("Cinematicas");
+        }
+
+        if(Video.Ing == true)
+        {
+            SceneManager.LoadScene("Cinematica Inglés");
+        }
     }
 
-    public void SeleccionarJungla (){
-        PlayerPrefs.SetInt("TemporizadorNivel", PlayerPrefs.GetInt("Dificultad")*60);
+    public void SeleccionarJungla ()
+    {
+
+        PlayerPrefs.SetInt("TemporizadorNivel", PlayerPrefs.GetInt("Dificultad")*90);
+
+        if(Video.Ing == false)
+        {
+            SceneManager.LoadScene("Carga2");
+        }
+
+        if(Video.Ing == true)
+        {
+            SceneManager.LoadScene("Carga2In");
+        }
+    }
+
+    public void SeleccionarDesierto ()
+    {
+
+        PlayerPrefs.SetInt("TemporizadorNivel", PlayerPrefs.GetInt("Dificultad")*90);
         
-        SceneManager.LoadScene("Carga2");
+        if(Video.Ing == false)
+        {
+            SceneManager.LoadScene("Carga3");
+        }
+
+        if(Video.Ing == true)
+        {
+            SceneManager.LoadScene("Carga3In");
+        }
+    }
+
+    public void SeleccionarLaboratiorio ()
+    {
+
+        PlayerPrefs.SetInt("TemporizadorNivel", PlayerPrefs.GetInt("Dificultad")*90);
+        
+        if(Video.Ing == false)
+        {
+            SceneManager.LoadScene("Carga4");
+        }
+
+        if(Video.Ing == true)
+        {
+            SceneManager.LoadScene("Carga4In");
+        }
     }
 }

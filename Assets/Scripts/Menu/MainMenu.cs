@@ -7,7 +7,15 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame ()
     {
-        SceneManager.LoadScene("Carga1");
+        if(Video.Ing == false)
+        {
+            SceneManager.LoadScene("Cinematicas");
+        }
+
+        if(Video.Ing == true)
+        {
+            SceneManager.LoadScene("Cinematica Inglés");
+        }
     }
 
     public void QuitGame ()
@@ -19,5 +27,15 @@ public class MainMenu : MonoBehaviour
     public void BorrarGuardado ()
     {
         PlayerPrefs.SetInt("Guardado", 0);
+    }
+
+    public void Inglés()
+    {
+        SceneManager.LoadScene("SCNMenuV2 1");
+    }
+
+    public void Spanish()
+    {
+        SceneManager.LoadScene("SCNMenuV2");
     }
 }

@@ -12,7 +12,7 @@ public class GameOver : MonoBehaviour
 
     public void RePlayGame ()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetString("CargaNivel"));
+        SceneManager.LoadScene(Pausa.NameScene);
     }
 
     public void ReQuitGame ()
